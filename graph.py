@@ -46,7 +46,7 @@ def create_scenario():
 def _create_suspects():
 
     for sospechoso in os.listdir(OUTPUT_FOLDER):
-        if sospechoso is not '.DS_Store':
+        if sospechoso != '.DS_Store':
             __create_suspect(sospechoso)
     __check_asassin()
 
