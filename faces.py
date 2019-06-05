@@ -9,13 +9,13 @@ MIN_NEIGHBORS = 3
 MIN_SIZE = (30, 30)
 
 # Paths foto
-IMAGE_PATH = 'suspects.jpg'
+
 OUTPUT_FOLDER = '/Users/f.brevers.gomez/Documents/col-o-mbo/output/'
 
 
 def detect_export_faces(image):
 
-    image = cv2.imread(IMAGE_PATH)
+    image = cv2.imread(image)
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
     face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + HAARCASCADE)
@@ -36,4 +36,4 @@ def detect_export_faces(image):
 
 
 if __name__ == "__main__":
-    detect_export_faces(IMAGE_PATH)
+    detect_export_faces('suspects.jpg')
